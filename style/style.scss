@@ -5,8 +5,14 @@ $colors : (
 $margintop: 100px;
 $marginleft: 50px;
 $marginright: 50px;
-* {
-    font-family: 'Proxima Nova';
+@font-face {
+    font-family: 'proximanova';
+    src: url(/Fonts/ProximaNova-Black.otf) format('otf'),
+    url(/Fonts/ProximaNova-Regular.otf) format('otf'),
+    url(/Fonts/ProximaNovaCond-Regular.otf) format('otf');
+}
+body {
+    font-family: 'proximanova', Fallack, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -30,9 +36,16 @@ $marginright: 50px;
 
 .nav-links,
 .logo {
-    margin: auto;
+    margin: 0 auto;
     width: 150px;
     position: relative;
+    justify-content: center;
+    transition: ease-in-out 0.15s;
+}
+
+.nav-links:hover{
+    font-size: 1.1rem;
+    transition: ease-in-out 0.15s;
 }
 
 .main-nav li {
@@ -84,6 +97,7 @@ $marginright: 50px;
     }
 
     .nav-links {
+        transition: ease-in-out 0.15s;
         margin-left: 40px;
     }
 
@@ -99,7 +113,8 @@ $marginright: 50px;
 
     .logo:hover,
     .nav-links:hover {
-        color: rgba(255, 255, 255, 1);
+        font-size: 1.25rem;
+        transition: ease-in-out 0.15s;
     }
 }
 #section1 {
@@ -200,7 +215,6 @@ $marginright: 50px;
         height: 257px;
         width: 100%;
         position: absolute;
-        float: right;
     }
 
     .phone {
@@ -240,7 +254,9 @@ $marginright: 50px;
             font-size: 30px;
         }
     }
-
+    .icon_pack {
+        margin-top: 30px;
+    }
     .gradient, .icon_pack {
         text-align: center;
         color: white;
@@ -319,7 +335,7 @@ $marginright: 50px;
     }
     
     .content {
-        padding: 120px 120px;
+        padding: 150px 150px;
         h2 {
             font-weight: bold;
         }
@@ -327,7 +343,6 @@ $marginright: 50px;
 
     .images {
         img {
-            position: absolute;
             float: left;
             width: 150px;
             height: 150px;
@@ -342,8 +357,7 @@ $marginright: 50px;
     height: 300px;
     .profpic {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         width: 107px;
         height: 100px;
         border-radius: 50%;
@@ -455,7 +469,8 @@ footer {
             padding: 70px 70px;
         }
     
-        .col-sm-6 {
+        .col-md-4 {
+            margin-top: 30px;
             img {
                 width: 300px;
                 height: 300px;
@@ -573,7 +588,7 @@ footer {
         }
     
         .gradient, .icon_pack {
-            font-size: 20px;
+            font-size: 10px;
             text-align: center;
             color: white;
         }
